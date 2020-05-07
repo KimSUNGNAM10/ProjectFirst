@@ -3,7 +3,7 @@ package com.yedam.dev;
 public class ArrayExample2 {
 	public static void main(String[] args) {
 		System.out.println(getLargeValue(11, 15, 22));
-
+ 
 		System.out.println(getLargeValue(new int[] { 3, 6, 7, 8 }));
 
 		String result = getString("HEllo", "WOrld");
