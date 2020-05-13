@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class AccountExample {
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in); // 파일, 사용자가 입력한 값을 처리하겠다
+		Scanner scn = new Scanner(System.in);  // 파일,사용자가 입력한 값을 처리하겠다
 		Account[] accounts = new Account[100];
 		while (true) {
 			System.out.println("=======================================");
@@ -13,7 +13,7 @@ public class AccountExample {
 			System.out.println("=======================================");
 			System.out.println("선택> ");
 			int menu = scn.nextInt();
-			scn.nextLine();// ??엔터가 소진시켜줘야됨
+			scn.nextLine();  // 엔터가 소진시켜줘야됨
 			if (menu == 1) {
 				System.out.println("계좌생성 선택.");
 				System.out.println("계좌번호를 입력하세요.");
@@ -25,7 +25,7 @@ public class AccountExample {
 				Account acnt = new Account(ano, owner, balance);
 				for (int i = 0; i < accounts.length; i++) {
 					if (accounts[i] == null) {
-						accounts[i] = acnt; // ? accounts[0] = acnt;
+						accounts[i] = acnt;     //accounts[0] = acnt;
 						break;
 					}
 				}
@@ -36,7 +36,8 @@ public class AccountExample {
 				for (Account acc : accounts) {
 					if (acc != null) { 
 						System.out.println(
-								"계좌번호 : " + acc.getAno() + ", 예금주 : " + acc.getOwner() + "잔액 : " + acc.getBalance());
+								"계좌번호 : " + acc.getAno() + ", 예금주 : " + acc.getOwner()
+								+ "잔액 : " + acc.getBalance());
 					}
 				}
 			} else if (menu == 3) {
