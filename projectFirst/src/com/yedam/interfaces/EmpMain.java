@@ -7,6 +7,7 @@ public class EmpMain {
 		// 1.입력 2.전체리스트 3. 수정 4.삭제 5.종료
 		Scanner scn = new Scanner(System.in);
 		EmpService service = new EmpServiceImpl();
+		
 		while (true) {
 			System.out.println("================================");
 			System.out.println("1.입력 2.전체리스트 3.수정 4.삭제 5.종료");
