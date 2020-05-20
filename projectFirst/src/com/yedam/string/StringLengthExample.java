@@ -6,7 +6,7 @@ public class StringLengthExample {
 		int length = ssn.length();
 		if(length == 13) {
 			System.out.println("주민번호 자리수가 맞습니다");
-		} else {
+		} else { //sdsd
 			System.out.println("주민번호 자리수가 틀립니다");
 		}
 	}
