@@ -8,5 +8,6 @@ public class BoxingExample {
 		
 		Box<String> strBox = Utils.boxing("Park");
 		String result = strBox.get();
+		System.out.println(result);
 	}
 }
