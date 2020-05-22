@@ -1,0 +1,15 @@
+package com.yedam.list;
+
+public interface EmpService {
+	//기능만 정의, 구현x
+	
+	
+	//한건생성 
+	public void createEmp(Employee emp); //public abstract void createEmp();라고 자동으로 만듬
+//	전체 조회 
+	public void getEmpList();
+//	한건수정 
+	public void changeEmp(Employee emp);
+//	한건삭제
+	public void removeEmp(int empId);
+}
