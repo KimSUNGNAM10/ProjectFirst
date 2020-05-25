@@ -41,7 +41,7 @@ public class BoardMain {
 				String Editor = scn.nextLine();
 
 				Board board = new Board(Title, contents, Editor);
-				service.insertBoard(list, board);
+				service.changeBoard(list, board);
 				break;
 			}
 			case 3: {

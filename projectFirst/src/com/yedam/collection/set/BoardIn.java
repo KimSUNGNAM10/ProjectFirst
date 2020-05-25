@@ -4,12 +4,12 @@ import java.util.List;
 
 public class BoardIn implements BoardService {
 
-	private static final String Title = null;
+
 
 	public int findIndex(List<Board> list, String title) {
 		for (int idx = 0; idx < list.size(); idx++) {
 			Board tempBoard = list.get(idx);
-			if (tempBoard.Title.equals(Title))
+			if (tempBoard.Title.equals(title))
 				return idx;
 		}
 		return -1;
@@ -23,7 +23,7 @@ public class BoardIn implements BoardService {
 
 	@Override
 	public void changeBoard(List<Board> list, Board board) {
-		int idx = findIndex(list, Title);
+		int idx = findIndex(list, board.Title);
 		if (idx >= 0)
 			list.set(idx, board);
 
