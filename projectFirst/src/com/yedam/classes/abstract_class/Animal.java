@@ -10,3 +10,4 @@ public abstract class Animal {
 	}
 	public abstract void sound();//추상메소드는  하위클래스에 정의를 해줘야됨
 }
+							

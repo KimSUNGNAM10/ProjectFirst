@@ -9,7 +9,8 @@ public class BoardMain {
 
 		Scanner scn = new Scanner(System.in);
 		List<Board> list = new ArrayList<>();
-		BoardService service = (BoardService) new BoardIn();
+		
+		BoardService service = new BoardIn();
 
 		while (true) {
 			System.out.println("================================");
@@ -18,6 +19,7 @@ public class BoardMain {
 			System.out.println("선택");
 
 			int menu = scn.nextInt(); scn.nextLine();
+			
 			switch (menu) {
 
 			case 1: {
@@ -40,7 +42,7 @@ public class BoardMain {
 				System.out.println("작성자 입력 : ");
 				String Editor = scn.nextLine();
 
-				Board board = new Board(Title, contents, Editor);
+				Board board = new Board(Title, contents, Editor); //수정에 작성자 빼고싶으면 빼고 null
 				service.changeBoard(list, board);
 				break;
 			}
@@ -53,6 +55,7 @@ public class BoardMain {
 			case 4:
 				service.boardList(list);
 				break;
+				
 			case 5:
 				System.out.println("프로그램 종료");
 				return;

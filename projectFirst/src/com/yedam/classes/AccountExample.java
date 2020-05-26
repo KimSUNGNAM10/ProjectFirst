@@ -13,7 +13,8 @@ public class AccountExample {
 			System.out.println("=======================================");
 			System.out.println("선택> ");
 			int menu = scn.nextInt();
-			scn.nextLine();  // 엔터가 소진시켜줘야됨
+			scn.nextLine();  // 엔터를 소진시켜줘야됨
+			
 			if (menu == 1) {
 				System.out.println("계좌생성 선택.");
 				System.out.println("계좌번호를 입력하세요.");
@@ -30,6 +31,7 @@ public class AccountExample {
 					}
 				}
 				System.out.println("계좌가 생성되었습니다.");
+				
 			} else if (menu == 2) {
 				System.out.println("계좌목록 선택.");
 				// 전체 배열중에 값이 있는 경우에만 출력(null 제외)
@@ -40,6 +42,7 @@ public class AccountExample {
 								+ "잔액 : " + acc.getBalance());
 					}
 				}
+				
 			} else if (menu == 3) {
 				System.out.println("예금 선택.");
 				System.out.println("계좌번호를 입력하세요.");
@@ -54,6 +57,7 @@ public class AccountExample {
 					}
 				}
 				System.out.println("예금 처리가 되었습니다.");
+				
 			} else if (menu == 4) {
 				System.out.println("출금 선택.");
 				System.out.println("계좌번호를 입력하세요.");

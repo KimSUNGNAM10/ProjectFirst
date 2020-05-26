@@ -7,7 +7,7 @@ public class Board {
 	String Editor;
 
 	public Board(String Title, String contents, String Editor) {
-		super();
+
 		this.Title = Title;
 		this.contents = contents;
 		this.Editor = Editor;

@@ -26,7 +26,11 @@ public class BoardIn implements BoardService {
 		int idx = findIndex(list, board.Title);
 		if (idx >= 0)
 			list.set(idx, board);
-
+		//for (int i= 0; i<list.size(); i++) {
+		//if (list.get(i).getTitle().equals(board.getTitle())) {
+		//list.get(i).setContent(board.getContent());
+		//}
+		//}
 	}
 
 	@Override
@@ -34,6 +38,11 @@ public class BoardIn implements BoardService {
 		int idx = findIndex(list, Title);
 		if (idx >=0)
 			list.remove(idx);
+		// for (int i=0; i<list.size(); i++) {
+		//if (list.get(i).getTitle().equals(title()) {
+		//list.remove(i);
+		//}
+		//}
 	}
 
 	@Override
