@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml/1">
+	<!-- 주석표시 -->
+	<padding>
+		<Insets topRightBottomLeft = "10.0"></Insets> <!-- ><사이에 값이 없으면 10.0/> 가능능 -->
+		<Insets top = "10.0" right = "10.0" bottom = "10.0" left = "10.0" />
+	</padding>
+	<spacing>10</spacing>
+	<children>
+		<TextField>
+			<prefWidth>200</prefWidth>
+		</TextField>
+	
+		<Button>
+			<text>확인</text>
+		</Button>
+	</children>
+</HBox>
+
