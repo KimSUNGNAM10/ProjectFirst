@@ -2,6 +2,8 @@ package FXML;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,16 +18,38 @@ public class AppMain extends Application {
 		HBox root = new HBox();
 		root.setPadding(new Insets(10,10,10,10));
 		root.setSpacing(10);
+		root.setPrefSize(700,300);
 		
 		TextField textField = new TextField();
+		textField.setPrefHeight(100);
 		textField.setPrefWidth(200);
 		
 		Button button = new Button();
 		button.setText("확인");
+		button.setPrefSize(100, 100);
+		button.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				textField.setText("확인을 눌렀습니다.");
+			}
+		});
+		
+		Button button1 = new Button();
+		button1.setText("취소");
+		button1.setPrefSize(100, 100);
+		button1.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				textField.setText(null);
+			}
+		
+		});
+		
 		
 		ObservableList list = root.getChildren();
 		list.add(textField);
 		list.add(button);
+		list.add(button1);
 		
 		Scene scene = new Scene(root);
 		
