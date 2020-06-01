@@ -10,20 +10,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class AppMain extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		HBox root = new HBox();
-		root.setPadding(new Insets(10,10,10,10));
+		root.setPadding(new Insets(10, 10, 10, 10));
 		root.setSpacing(10);
-		root.setPrefSize(700,300);
-		
+		root.setPrefSize(700, 300);
+
 		TextField textField = new TextField();
 		textField.setPrefHeight(100);
 		textField.setPrefWidth(200);
-		
+
 		Button button = new Button();
 		button.setText("확인");
 		button.setPrefSize(100, 100);
@@ -33,7 +34,7 @@ public class AppMain extends Application {
 				textField.setText("확인을 눌렀습니다.");
 			}
 		});
-		
+
 		Button button1 = new Button();
 		button1.setText("취소");
 		button1.setPrefSize(100, 100);
@@ -42,22 +43,28 @@ public class AppMain extends Application {
 			public void handle(ActionEvent event) {
 				textField.setText(null);
 			}
-		
+
 		});
-		
-		
+
 		ObservableList list = root.getChildren();
 		list.add(textField);
 		list.add(button);
 		list.add(button1);
-		
+
 		Scene scene = new Scene(root);
-		
+
 		primaryStage.setTitle("레이아웃");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent event) {
+				System.out.println(event);
+			}
+
+		});
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}
