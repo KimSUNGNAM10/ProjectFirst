@@ -95,8 +95,10 @@ public class StageController implements Initializable {
 					TextField txtMath = (TextField) parent.lookup("#txtMath");
 					TextField txtEnglish = (TextField) parent.lookup("#txtEnglish");
 
-					Student student = new Student(txtName.getText(), Integer.parseInt(txtKorean.getText()),
-							Integer.parseInt(txtMath.getText()), Integer.parseInt(txtEnglish.getText()));
+					Student student = new Student(txtName.getText(), 
+							Integer.parseInt(txtKorean.getText()),
+							Integer.parseInt(txtMath.getText()), 
+							Integer.parseInt(txtEnglish.getText()));
 					scores.add(student);
 					addStage.close();
 				}
