@@ -11,7 +11,7 @@ public class Exercise08 {
 			System.out.println("0.0으로 나울 수 없습니다");
 		} else {
 			double result = z +10;
-			System.out.println("결과 : " + result);
+			System.out.println("결과 : " + result);//ss
 		}
 	}
 }
